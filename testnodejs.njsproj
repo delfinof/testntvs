@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ef02d33e-728e-4506-94c9-1d4779872100}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartupFile>proxy-single.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Compile Include="config-loader.js" />
+    <Compile Include="lib\deviceModule.js" />
+    <Compile Include="lib\userModule.js" />
+    <Compile Include="Logging.js" />
+    <Compile Include="owl_util.js" />
+    <Compile Include="proxy-single.js" />
+    <Compile Include="proxy.js" />
+    <Compile Include="applications\example-app.js" />
+    <Compile Include="lib\main.js" />
+    <Compile Include="lib\simplifiedRequest.js" />
+    <Compile Include="lib\stats.js" />
+    <Compile Include="lib\storage.js" />
+    <Compile Include="lib\q-enhanced.js" />
+    <Compile Include="routes\credential.js" />
+    <Compile Include="routes\event.js" />
+    <Compile Include="routes\facebook-video.js" />
+    <Compile Include="routes\facebook.js" />
+    <Compile Include="routes\foursquare.js" />
+    <Compile Include="routes\googleaccount.js" />
+    <Compile Include="routes\lastfm.js" />
+    <Compile Include="routes\monitor.js" />
+    <Compile Include="routes\mxmapi.js" />
+    <Compile Include="routes\notification.js" />
+    <Compile Include="routes\standalone.js" />
+    <Compile Include="routes\store_affiliates.js" />
+    <Compile Include="routes\token.js" />
+    <Compile Include="routes\twitter.js" />
+    <Compile Include="routes\update.js" />
+    <Compile Include="routes\user.js" />
+    <Compile Include="routes\userdata.js" />
+    <Compile Include="routes\windowslive.js" />
+    <Content Include="static\robots.txt" />
+    <Content Include="static\favicon.ico" />
+    <Content Include="static\crossdomain.xml" />
+    <Compile Include="routes\xboxmusic.js" />
+    <Compile Include="tests\simpledb_test.js" />
+    <Compile Include="lib\storage-drivers\azure.js" />
+    <Compile Include="lib\storage-drivers\couchbase-v2.js" />
+    <Compile Include="lib\storage-drivers\couchbase.js" />
+    <Compile Include="lib\storage-drivers\memcached-v2.js" />
+    <Compile Include="lib\storage-drivers\memcached.js" />
+    <Compile Include="lib\storage-drivers\simpledb.js" />
+    <Compile Include="lib\storage-drivers\simpledb_w_memcached.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
